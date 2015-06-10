@@ -12,16 +12,15 @@ nav {
 
 header {
   position: relative;
-  margin: 0px 15px;
-  background-color: gray;
+  margin: 15px 15px;
+  background-color: blue;
 }
 
 .big {
   position: relative;
   height: 415px;
-  margin-top: 15px;
   margin-right: 305px;
-  background-color: blue;
+  background-color: lightblue;
 }
 
 .small {
@@ -29,11 +28,56 @@ header {
   float: right;
   height: 200px;
   width: 290px;
-  background-color: blue;
+  background-color: lightblue;
   margin-left: 15px;
+  margin-bottom: 15px;
+  clear:right;
 }
 
-.second {
-  margin-top: 15px;
-  clear:right;
+.announcement {
+  position: relative;
+  height: 50px;
+  background-color: yellow;
+}
+
+main {
+  position: relative;
+  margin: 15px 55px;
+}
+
+.news {
+  position: relative;
+  background-color: lightgreen;
+  margin-bottom: 25px;
+}
+
+.more {
+  position: relative;
+  background-color: lightgreen;
+  margin-bottom: 25px;
+}
+
+.trigger {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  border: 1px dotted black;
+  width: 16.666666%;
+  height: 200px;
+  background-color: green;
+}
+
+.more .trigger {
+  width: 25%;
+  height: 300px;
+}
+
+.clear {
+  clear: both;
+}
+
+footer {
+  position: relative;
+  height: 350px;
+  background-color: black;
 }
