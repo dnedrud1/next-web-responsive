@@ -2,6 +2,7 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
 body {
+  font-family: 'ARS Maquette','Helvetica Neue',sans-serif;
 }
 
 a {
@@ -12,7 +13,6 @@ a {
   height: 48px;
   padding: 18px 8px 0 8px;
   text-align: center;
-  text-transform: uppercase;
   font-family: 'Shentox Medium',sans-serif;
   font-weight: 500;
   letter-spacing: .02em;
@@ -66,32 +66,90 @@ nav {
 header {
   position: relative;
   margin: 15px 15px;
-  background-color: blue;
 }
 
 .big {
+  box-sizing: border-box;
   position: relative;
   height: 415px;
   margin-right: 305px;
-  background-color: lightblue;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("images/twitter-ceo.jpg");
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.big p {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 45px;
 }
 
 .small {
+  box-sizing: border-box;
   position: relative;
   float: right;
   height: 200px;
   width: 290px;
-  background-color: lightblue;
   margin-left: 15px;
   margin-bottom: 15px;
   clear:right;
 }
 
+.small p {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.twitter {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("images/twitter.jpg");
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: 400px;
+}
+
+.rift {
+  background-image: url("images/rift.jpg");
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: 400px;
+}
+
 .announcement {
   position: relative;
-  height: 50px;
-  background-color: yellow;
+  background-color: #ffd300;
+  padding: 17px;
+  text-align: center;
 }
+
+.announcement div {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.announcement h1 {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.announcement p {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.red {
+  color: red;
+}
+
+/*Main Section*/
 
 main {
   position: relative;
@@ -103,15 +161,21 @@ main {
   margin: 15px 55px 0px 55px;
 }
 
+main h1, .main2 h1 {
+  color: #ff4020;
+  text-decoration: none;
+  font-size: 2.5em;
+  margin: 20px 0px;
+  font-weight: 900;
+}
+
 .news {
   position: relative;
-  background-color: lightgreen;
   margin-bottom: 25px;
 }
 
 .more {
   position: relative;
-  background-color: lightgreen;
   margin-bottom: 25px;
 }
 
@@ -119,15 +183,35 @@ main {
   position: relative;
   float: left;
   box-sizing: border-box;
-  border: 1px dotted black;
+  border: 5px solid #fff;
   width: 16.666666%;
   height: 200px;
-  background-color: green;
+}
+
+.trigger a {
+  padding: 10px 0px;
+  text-align: left;
+  color: #000;
+  font-size: 15px;
+  font-weight: 900;
+  text-decoration: none;
+  line-height: 18px;
+}
+
+.trigger p {
+  font-size: 13px;
+  color: #959595;
+  display: inline-block;
+  line-height: 14px;
+  height: 48px;
+  font-family: 'Shentox Medium',sans-serif;
 }
 
 .more .trigger {
   width: 25%;
   height: 300px;
+  background-color: #F1F1F1;
+  padding: 10px;
 }
 
 .clear {
@@ -140,7 +224,7 @@ footer {
   position: relative;
   height: 350px;
   padding: 40px;
-  background-color: black;
+  background-color: #000;
 }
 
 footer div {
@@ -193,6 +277,8 @@ footer div p {
   color: #646464;
 }
 
+/*Responsive Styles!*/
+
 @media screen and (max-width: 1130px) {
     .section {
       display: none;
@@ -228,6 +314,14 @@ footer div p {
       float: none;
       margin: 10px 0px;
     }
+    .big p {
+      font-size: 25px;
+    }
+    .small {
+      background-size: 900px;
+    }
+
+
     .news .trigger {
       width: 25%;
     }
@@ -252,6 +346,9 @@ footer div p {
     .main2 {
       margin: 15px 0px 0px 0px;
     }
+    .main2 h1 {
+      padding-left: 20px;
+    }
     .more .trigger:nth-child(4) {
       width: 100%;
       display: block;
@@ -259,13 +356,28 @@ footer div p {
     .more .trigger:nth-child(2) {
       height: 400px;
     }
+    .more .trigger {
+      padding: 0px !important;
+    }
+    .smaller img {
+      width:auto !important;
+      height:100% !important;
+      float: left;
+      margin-right: 10px;
+    }
+    .smaller a {
+      display: block;
+    }
+    .more p {
+      display: none;
+    }
+
 
     footer {
       padding: 20px;
       height: 600px;
     }
     footer div {
-
       float: none;
       display: block;
     }
@@ -291,7 +403,7 @@ footer div p {
       margin: 0px;
     }
     .needs-centering {
-      width: 465px;
+      width: 470px;
       margin: 0px auto;
     }
 
